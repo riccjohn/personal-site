@@ -19,7 +19,13 @@
     "strict": true,
     "noFallthroughCasesInSwitch": true,
 
-    "types": ["@testing-library/jest-dom", "vitest/globals"]
+    "types": ["@testing-library/jest-dom", "vitest/globals"],
+
+    /* Absolute imports */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
