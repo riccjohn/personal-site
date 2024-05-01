@@ -1,0 +1,14 @@
+import type { Meta, StoryObj } from '@storybook/react'
+import {{properCase name}} from '.'
+
+const meta: Meta<typeof {{properCase name}}> = {
+  component: {{properCase name}},
+  tags: ['autodocs'],
+}
+
+export default meta
+type Story = StoryObj<typeof {{properCase name}}>
+
+export const Primary: Story = {
+  render: () => (<{{properCase name}} />)
+}

@@ -5,6 +5,6 @@ describe('App', () => {
   test('displays correctly', () => {
     render(<App />)
 
-    expect(screen.getByText('Vite + React')).toBeInTheDocument()
+    expect(screen.getByText('Hello, World!')).toBeInTheDocument()
   })
 })
