@@ -28,6 +28,7 @@ export default defineConfig({
         '**/*/index.ts',
         'src/main.tsx',
         'src/App.tsx',
+        'src/stories/',
       ],
     },
   },
