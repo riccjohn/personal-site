@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react'
 import App from './App'
 
 describe('App', () => {
-  test('displays correctly', () => {
+  test('displays a navigation panel', () => {
     render(<App />)
 
-    expect(screen.getByText('Hello, World!')).toBeInTheDocument()
+    expect(screen.getByRole('navigation')).toBeVisible()
   })
 })
