@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
-import App from './App'
+import VimStatusBarBottom from './VimStatusBarBottom'
 
-describe('App', () => {
+describe('VimStatusBarBottom', () => {
   beforeAll(() => {
     vitest.useFakeTimers().setSystemTime(new Date('December 09, 1987 15:24:00'))
   })
@@ -10,14 +10,8 @@ describe('App', () => {
     vitest.useRealTimers()
   })
 
-  test('displays a navigation panel', () => {
-    render(<App />)
-
-    expect(screen.getByRole('navigation')).toBeVisible()
-  })
-
   test('displays the current time', () => {
-    render(<App />)
+    render(<VimStatusBarBottom />)
 
     expect(screen.getByText(/3:24 PM/))
   })
