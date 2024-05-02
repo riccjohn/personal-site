@@ -1,3 +1,5 @@
+import React from 'react'
+import '@fontsource-variable/source-code-pro'
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels'
 
 const App: React.FC = () => {
@@ -14,7 +16,7 @@ const App: React.FC = () => {
         maxSize={25}
         data-testid='navigation-panel'
       >
-        <nav>
+        <nav className='font-mono'>
           <ul>
             <li>Home</li>
             <li>Contact</li>
