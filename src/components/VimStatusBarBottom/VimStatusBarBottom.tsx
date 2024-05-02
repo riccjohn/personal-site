@@ -11,7 +11,7 @@ const VimStatusBarBottom: React.FC = () => {
 
   return (
     <div className='flex h-6 w-full justify-between bg-nosferatu-900 font-mono'>
-      <div className='flex'>
+      <div id='left' className='flex'>
         <span className='size-fit bg-dracula-cyan-400'>
           <p className='text-nosferatu'>{mode}</p>
         </span>
@@ -19,7 +19,13 @@ const VimStatusBarBottom: React.FC = () => {
           <p className='text-dracula-cyan-400'>123-main</p>
         </span>
       </div>
-      <div className='flex'>
+      <div id='center'>
+        <p className='text-dracula-cyan-400'>
+          Made with <span className='text-dracula-pink-300'>❤</span> in
+          Madison, WI
+        </p>
+      </div>
+      <div id='right' className='flex'>
         <span className='size-fit bg-dracula-cyan-400'>
           <p className='text-nosferatu'>{currentTime}</p>
         </span>

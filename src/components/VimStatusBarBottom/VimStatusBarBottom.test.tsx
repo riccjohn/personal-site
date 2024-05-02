@@ -13,6 +13,13 @@ describe('VimStatusBarBottom', () => {
   test('displays the current time', () => {
     render(<VimStatusBarBottom />)
 
-    expect(screen.getByText(/3:24 PM/))
+    expect(screen.getByText(/3:24 PM/)).toBeVisible()
+  })
+
+  test(`displays 'Made with ❤ in Madison, WI'`, () => {
+    render(<VimStatusBarBottom />)
+
+    expect(screen.getByText(/Made with/)).toBeVisible()
+    expect(screen.getByText(/Madison, WI/)).toBeVisible()
   })
 })
