@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run tests
-        run: npm run test
+        run: pnpm run test
       - name: Coverage
         if: always() # Also generate the report if tests are failing
         uses: davelosert/vitest-coverage-report-action@v2
