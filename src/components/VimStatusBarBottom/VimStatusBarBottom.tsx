@@ -8,16 +8,31 @@ const VimStatusBarBottom: React.FC = () => {
   })
 
   const mode = 'NORMAL'
+  const branchName = '123-main'
 
   return (
-    <div className='flex h-6 w-full justify-between bg-nosferatu-900 font-mono'>
+    <div className='flex h-6 w-full  justify-center bg-nosferatu-900 font-mono sm:justify-between '>
       <div id='left' className='flex'>
-        <span className='size-fit bg-dracula-cyan-400'>
-          <p className='text-nosferatu'>{mode}</p>
-        </span>
-        <span className='bg-dracula-darker-700'>
-          <p className='text-dracula-cyan-400'>123-main</p>
-        </span>
+        <div className='hidden sm:flex'>
+          <span className='size-fit bg-dracula-cyan-400 px-4'>
+            <p className='text-nosferatu'>{mode}</p>
+          </span>
+          <div
+            id='right-arrow'
+            className='z-10 size-0 border-y-[12px] border-l-[12px] border-y-transparent border-l-dracula-cyan-400'
+          />
+        </div>
+        {branchName && (
+          <div className='relative left-[-12px] hidden bg-transparent md:flex'>
+            <span className=' bg-dracula-darker-700 pl-4 pr-2'>
+              <p className='text-dracula-cyan-400'>{branchName}</p>
+            </span>
+            <div
+              id='right-arrow'
+              className='size-0 border-y-[12px] border-l-[12px] border-y-transparent border-l-dracula-darker-700'
+            />
+          </div>
+        )}
       </div>
       <div id='center'>
         <p className='text-dracula-cyan-400'>
@@ -25,8 +40,13 @@ const VimStatusBarBottom: React.FC = () => {
           Madison, WI
         </p>
       </div>
-      <div id='right' className='flex'>
-        <span className='size-fit bg-dracula-cyan-400'>
+      <div id='right' className='hidden sm:flex'>
+        <div
+          id='lef-arrow'
+          className='size-0 border-y-[12px] border-r-[12px] border-y-transparent border-r-dracula-cyan-400'
+        />
+
+        <span className='size-fit bg-dracula-cyan-400 px-4'>
           <p className='text-nosferatu'>{currentTime}</p>
         </span>
       </div>
