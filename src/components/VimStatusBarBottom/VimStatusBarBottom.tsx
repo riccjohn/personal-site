@@ -1,27 +1,33 @@
 import React from 'react'
 
-const VimStatusBarBottom: React.FC = () => {
+type VimStatusBarBottomProps = {
+  branchName?: string
+  mode?: string
+}
+
+const VimStatusBarBottom: React.FC<VimStatusBarBottomProps> = ({
+  branchName = 'main',
+  mode = 'NORMAL',
+}) => {
   const currentTime = new Date().toLocaleTimeString([], {
     hour: '2-digit',
     minute: '2-digit',
     timeZoneName: 'short',
   })
-
-  const mode = 'NORMAL'
-  const branchName = '123-main'
-
   return (
     <div className='flex h-6 w-full  justify-center bg-nosferatu-900 font-mono sm:justify-between '>
       <div id='left' className='flex'>
-        <div className='hidden sm:flex'>
-          <span className='size-fit bg-dracula-cyan-400 px-4'>
-            <p className='text-nosferatu'>{mode}</p>
-          </span>
-          <div
-            id='right-arrow'
-            className='z-10 size-0 border-y-[12px] border-l-[12px] border-y-transparent border-l-dracula-cyan-400'
-          />
-        </div>
+        {mode && (
+          <div className='hidden sm:flex'>
+            <span className='size-fit bg-dracula-cyan-400 px-4'>
+              <p className='text-nosferatu'>{mode}</p>
+            </span>
+            <div
+              id='right-arrow'
+              className='z-10 size-0 border-y-[12px] border-l-[12px] border-y-transparent border-l-dracula-cyan-400'
+            />
+          </div>
+        )}
         {branchName && (
           <div className='relative left-[-12px] hidden bg-transparent md:flex'>
             <span className=' bg-dracula-darker-700 pl-4 pr-2'>

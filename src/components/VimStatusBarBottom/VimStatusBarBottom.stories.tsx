@@ -10,3 +10,10 @@ export default meta
 type Story = StoryObj<typeof VimStatusBarBottom>
 
 export const Primary: Story = {}
+
+export const Custom: Story = {
+  args: {
+    mode: 'INSERT',
+    branchName: '123-test',
+  },
+}
