@@ -4,7 +4,21 @@ import dracula from 'tailwind-dracula'
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        mono: [
+          'Source Code Pro',
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          'Liberation Mono',
+          'Courier New',
+          'monospace',
+        ],
+      },
+    },
   },
   plugins: [dracula('dracula')],
 }
