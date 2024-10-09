@@ -15,7 +15,7 @@ const VimStatusBarBottom: React.FC<VimStatusBarBottomProps> = ({
     timeZoneName: 'short',
   })
   return (
-    <div className='flex h-6 w-full  justify-center bg-nosferatu-900 font-mono sm:justify-between '>
+    <div className='flex h-6 w-full justify-center bg-nosferatu-900 font-mono sm:justify-between'>
       <div id='left' className='flex'>
         {mode && (
           <div className='hidden sm:flex'>
@@ -30,7 +30,7 @@ const VimStatusBarBottom: React.FC<VimStatusBarBottomProps> = ({
         )}
         {branchName && (
           <div className='relative left-[-12px] hidden bg-transparent md:flex'>
-            <span className=' bg-dracula-darker-700 pl-4 pr-2'>
+            <span className='bg-dracula-darker-700 pl-4 pr-2'>
               <p className='text-dracula-cyan-400'>{branchName}</p>
             </span>
             <div
